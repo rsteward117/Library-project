@@ -1,0 +1,18 @@
+body{
+text-align: center;
+background-color: beige;
+color: orangered;
+}
+.formlayout{
+    background-color: aqua;
+    border: 2px solid aquamarine;
+    display: flex;
+    justify-content: center
+        ;
+    height: 300px;
+    width: 400px;
+    color: orangered;
+    position: absolute;
+    left: 35%;
+    bottom: 43%;
+}
