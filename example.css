@@ -1,0 +1,168 @@
+/* The asterisk lets us apply these styles to absolutely everything here we want to remove default margin and padding from all elements and set them to 0 instead */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Applies to the body and all children elements */
+body {
+    font-family: Arial, Helvetica, sans-serif;  /* just a nicer font */
+}
+
+h1 {
+    /* Makes the "Library Project" header have a nice shadow below with some good padding */
+    box-shadow: 0px 0px 5px gray;
+    padding: 10px;
+}
+
+.header-container {
+    /* puts a space between the items inside the header-container so the first child appears all the way
+     * on the left and the second child goes all the way on the right. We use this so the "Enter Book Info"
+     * text and the "x" button are on opposite ends of the div */
+    display: flex;
+    justify-content: space-between;
+}
+
+.formlayout {
+    /* margin auto makes the left and right margin always equal, pushing the formlayout div to the center
+     * of the screen. Because we make the max-width 500px, the container stays in the middle of the screen
+     * at 500px unless we shrink the screen below that */
+    padding: 15px;
+    margin: auto;
+    max-width: 500px;
+}
+
+#theform {
+    /* add a shadow around the form, give it a nice padding and round the corners */
+    box-shadow: 0px 0px 4px gray;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* styles for Add a book button */
+#hidebutton {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    /* this background color was picked arbitrarily, just liked it */
+    background-color: rgb(94, 94, 199);
+    font-size: medium;
+}
+
+/* when the "Add a book here" button is hovered, make the cursor a pointer cursor and lighten the background color a bit */
+#hidebutton:hover {
+    cursor: pointer;
+    background-color:  rgb(118, 118, 199);
+}
+
+/* when the button is active, add a box shadow to the button. this gives a nice outline to the button when clicked */
+#hidebutton:active {
+    box-shadow: 0px 0px 2px 5px rgb(183, 183, 219);
+}
+
+/* Styles for x button */
+#closeForm {
+    /* make the width and height exactly the same, this is important because this will allow us to use 50%
+     * border radius to make the button a perfect circle */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: red;
+}
+
+/* when the x button is hovered, make the cursor a pointer hand */
+#closeForm:hover {
+    cursor: pointer;
+}
+
+/* Styling for the form header, labels, and inputs */
+h2 {
+    /* just add a bit of space below */
+    margin-bottom: 10px;
+}
+
+.input-container {
+    /* add some space between input containers, putting two values here means "10px" for top and bottom padding, "0px" for left and right */
+    padding: 10px 0px;
+}
+
+.input-container label {
+    /* make all the labels gray, just a stylistic choice */
+    color: gray;
+}
+
+/* this selector only applies to text inputs inside an element with the 'input-container' class */
+.input-container input[type=text] {
+    /* make the input fill up 100% of the parent's width */
+    width: 100%;
+    padding: 5px 0px;
+    /* remove the default border */
+    border: none;
+    /* then add just a bottom borderm a thin gray line */
+    border-bottom: 1px solid gray;
+}
+
+/* when a text input is focussed,  AKA the cursor is flickering inside of it*/
+.input-container input[type=text]:focus {
+    /* remove the default outline, try removing 'outline: none' to see what happens otherwise */
+    outline: none;
+    /* make the border blue  */
+    border-color: blue;
+}
+
+/* add some space betwene radio containers */
+.radio-container {
+    margin: 10px 0px;
+}
+
+/* make the radio button labels gray */
+.radio-container label {
+    color: gray;
+}
+
+/* add some space to the right of each radio button */
+input[type=radio] {
+    margin-right: 10px;
+}
+
+/* Submit button, similiar to the Add a book here button */
+input[type=submit] {
+    padding: 10px;
+    border: none;
+    background-color: rgb(49, 184, 49);
+    color: white;
+    border-radius: 5px;
+}
+
+/* when the submit button is hovered, make the cursor pointer */
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+/* same idea as the .formlayout selector. push the #bookEntryContainer element to the middle of the screen
+ * giving it a max width of 500px */
+#bookEntryContainer {
+    margin: auto;
+    max-width: 500px;
+}
+
+/* add some space to the "Book Entries" header and give it a nice border */
+#bookEntryContainer h2 {
+    border-bottom: 1px solid lightgray;
+    padding: 5px 0px;
+}
+
+/* style for entries */
+.entries {
+    /* give each entry some vertical space */
+    margin: 15px 0px;
+    /* nice shadowy outline */
+    box-shadow: 0px 0px 4px gray;
+    padding: 15px;
+    border-radius: 10px;
+}

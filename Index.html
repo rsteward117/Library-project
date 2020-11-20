@@ -4,38 +4,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Project</title>
-    <link rel="stylesheet" href="Library.css">
+    <!-- added my example css, since there were some issues with overflowing containers -->
+    <!-- <link rel="stylesheet" href="Library.css"> -->
+    <link rel="stylesheet" href="example.css">
 </head>
-<h1>Library Project </h1>
-<button id="hidebutton" onclick="showDiv()">Add a book here</button>
-<div class="formlayout">
-<form id="theform">
-    <button id="closeForm" onclick="hideDiv()">X</button>
-    <h2>Enter Book Info</h2>
-    <label for="title">Book's Title:</label>
-    <input type="text" id="title" name="title"><br>
-    <br>
-    <label for="author">Book's Author: </label>
-    <input type="text" id="author" name="author"> <br>
-    <br>  
-    <label for="pages">Book's Pages:</label>
-    <input type="text" id="pages" name="pages"><br>
-    <br>
-    <label>Have you read?</label>
-    <br>
-    <label for="yes">Yes</label>
-    <input type="radio" id="yes" name="read" value="yes">
-    <label for="no">No</label>
-    <input type="radio" id="no" name="read" value="no">
-    <br>
-    <br>
-    <input type="submit" name="submit">
-</form>
-    </div>
-<div id="bookEntryContainer">
-    <h2>Book Entries</h2>
-</div>
+
+<!-- moved everything inside the body tags, this is just a general standard to keep HTML for page content in the body tag -->
 <body>
+    <h1>Library Project </h1>
+    <button id="hidebutton" onclick="showDiv()">Add a book here</button>
+    <div class="formlayout">
+        <form id="theform">
+        <div class="header-container">
+            <h2>Enter Book Info</h2>
+            <!-- need to specify type of button or this will submit the form -->
+            <button type="button" id="closeForm" onclick="hideDiv()">X</button>
+        </div>
+
+        <div class="input-container">
+            <label for="title">Book's Title:</label><br/>
+            <input type="text" id="title" name="title">
+        </div>
+    
+        <div class="input-container">
+            <label for="author">Book's Author: </label><br/>
+            <input type="text" id="author" name="author">
+        </div>
+
+        <div class="input-container">
+            <label for="pages">Book's Pages:</label><br/>
+            <input type="text" id="pages" name="pages">
+        </div>
+            
+        
+        <label>Have you read?</label>
+        <div class="radio-container">
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="read" value="yes">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="read" value="no">
+        </div>
+      
+        <input type="submit" name="submit">
+    </form>
+    </div>
+    <div id="bookEntryContainer">
+        <h2>Book Entries</h2>
+    </div>
     <script src="Library.js"></script>
 </body>
 </html>
