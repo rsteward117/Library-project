@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="Library.css">
+</head>
+<body>
+<h1>Library Project </h1>
+<button id="hidebutton" onclick="showDiv()">Add a book here</button>
+<div class="formlayout">
+
+<form id="theform">
+    
+<div class="header-container">
+    <h2>Enter Book Info</h2>
+    <button id="closeForm" onclick="hideDiv()">X</button>
+    
+</div>
+    
+<div class="input-container">
+    <label for="title">Book's Title:</label>
+    <input type="text" id="title" name="title"><br>
+</div>
+    
+<div class="input-container">
+    <label for="author">Book's Author: </label>
+    <input type="text" id="author" name="author"> <br>
+</div>
+    
+<div class="input-container">
+    <label for="pages">Book's Pages:</label>
+    <input type="text" id="pages" name="pages"><br>
+</div>
+    
+    <label>Have you read?</label>
+    <div class="radio-container">
+    <label for="yes">Yes</label>
+    <input type="radio" id="yes" name="read" value="yes">
+    <label for="no">No</label>
+    <input type="radio" id="no" name="read" value="no">
+    </div>
+    
+    <input type="submit" name="submit">
+</form>
+    </div>
+<div id="bookEntryContainer">
+    <h2>Book Entries</h2>
+</div>
+
+    <script src="Library.js"></script>
+</body>
+</html>
